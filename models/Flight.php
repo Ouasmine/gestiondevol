@@ -20,9 +20,11 @@ class Flight{
                 booking.Depart,
                 booking.Destination,
                 booking.aller,
-                users.fullname,
-                booking.id_flight,
-                booking.statut
+                users.retour,
+                booking.prix,
+                booking.numero_de_place,
+                booking.statut,
+
             FROM
                 booking
             INNER JOIN users ON booking.id_user = users.id;');

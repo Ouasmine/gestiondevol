@@ -32,6 +32,9 @@
                         <a href="<?php echo BASE_URL;?>logout" title="Déconnexion" class="btn btn-sm btn-secondary mr-2 mb-2">
                         <i class ="fas fa-user"><?php echo $_SESSION['username'];?></i> 
                         </a>
+                        <a href="<?php echo BASE_URL?>allres" class="btn btn-sm btn-secondary mr-2 mb-2 "> <!--url de base plus la page add -->
+                <i class="fas fa-plane">TOUT LES RESERVATIONS</i>
+                </a>
                 </div>
                             <input type="text" name="search" placeholder="Rechercher">
                             <button class="btn btn-info btn-sm" name="find" type="submit"><i class="fas fa-search"></i></button>
@@ -40,7 +43,7 @@
                     <thead>
                         <tr>
                         <th scope="col">Départ</th>
-                        <th scope="col">Départ</th>
+                        <th scope="col">Destination</th>
                         <th scope="col">aller</th>
                         <th scope="col">retour</th>
                         <th scope="col">prix</th>

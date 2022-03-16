@@ -8,16 +8,17 @@ require_once './views/includes/alerts.php';
 
 
 
-//creation d'object out of class home
+//instancier d'object out of class home
 $home = new HomeController();
-$page = ['login','home','add','update','delete','register','logout','homeuser' ,'addpassenger', 'deleterev', 'homecopy', 'allres','showvols'];
+//  var arr 
+ $page = ['login','home','add','update','delete','register','logout','homeuser' ,'addpassenger', 'deleterev', 'homecopy', 'allres','showvols'];
 
 if(isset($_SESSION['login']) && $_SESSION['login'] === true){
 
 
         if(isset($_GET['page'])){
-            if(in_array($_GET['page'],$page)){
-                $page = $_GET ['page'];
+            if(in_array($_GET['page'],$page)){ /*recherche dans array*/
+                $page = $_GET ['page']; /*recupérer la page*/
                 $home->index($page);
             }
 

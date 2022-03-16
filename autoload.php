@@ -4,7 +4,7 @@ session_start();
 
 require_once './bootstrap.php';
 
-spl_autoload_register('autoload');
+spl_autoload_register('autoload'); /*execution*/
 
 function autoload($class_name){
     $array_paths = array(
@@ -16,7 +16,7 @@ function autoload($class_name){
     );
 
     $parts = explode('\\',$class_name); //change \ by /
-    $name = array_pop($parts);
+    $name = array_pop($parts); 
     foreach($array_paths as $path){
         $file = sprintf($path.'%s.php',$name);
         if(is_file($file)){
